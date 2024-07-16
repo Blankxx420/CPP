@@ -6,33 +6,35 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 23:12:33 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/11 00:35:39 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/07/16 11:18:07 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 int main(void)
 {
 	std::string input;
 	PhoneBook PhoneBook;
 	
+	PhoneBook.welcome_menu();
 	while (getline(std::cin, input) && !std::cin.eof())
 	{
 		if (input == "EXIT")
 			return (0);
 		if (input == "ADD")
 		{
-			Contact contact;
-			contact.init_contact();
-			break;
+			if (PhoneBook.add_contact() == 1)
+			{
+				std::cerr << "Aborted one or more field are empty" << std::endl;
+				PhoneBook.print_contact();		
+			}
+			else
+				std::cout << "Contact added" << std::endl;	
 		}
-		if (input.find("SEARCH") == 0)
+		if (input == "SEARCH")
 		{
-			char *argument;
-			input.copy(argument, input.length() - 7,  7);
-			PhoneBook.search_contact(argument);
+			PhoneBook.print_contact();
 		}
 	}
 	return (0);

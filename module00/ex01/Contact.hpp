@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:46:12 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/11 00:12:18 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/07/16 12:13:58 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include <iomanip>
+#include <ios>
 
 class Contact
 {
@@ -30,15 +32,8 @@ private:
 public:
 	Contact() {};
 	~Contact() {};
-	int init_contact(void);
+	int init_contact();
+	void print_information(int index);
 };
-
-/* Contact::Contact()
-{
-}
-
-Contact::~Contact()
-{
-} */
 
 #endif
