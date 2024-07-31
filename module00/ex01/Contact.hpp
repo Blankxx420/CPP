@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:46:12 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/16 12:13:58 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/07/31 23:16:22 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ private:
 	std::string _phone_number;
 	std::string _darkest_secret;
 	std::string _get_input(const char *str);
+	std::string _truncate(std::string str, size_t width);
 	
 public:
 	Contact() {};
 	~Contact() {};
-	int init_contact();
-	void print_information(int index);
+	int		init_contact();
+	void	print_basic_information(int index);
+	void	print_all_information(void);
 };
 
 #endif

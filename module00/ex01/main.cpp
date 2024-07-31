@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 23:12:33 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/16 11:18:07 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/07/29 22:13:48 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(void)
 	PhoneBook PhoneBook;
 	
 	PhoneBook.welcome_menu();
-	while (getline(std::cin, input) && !std::cin.eof())
+	while (std::getline(std::cin, input) && !std::cin.eof())
 	{
 		if (input == "EXIT")
 			return (0);
