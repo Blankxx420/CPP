@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/08 22:37:51 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 00:29:36 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/07 00:27:09 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/07 00:31:02 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef __ZOMBIE_H__
+#define __ZOMBIE_H__
 
-#include "Contact.hpp"
+#include <iostream>
 
-class PhoneBook
+class Zombie
 {
-	private:
-		Contact _contact[8];
-		int		_index = 0;
-		bool 	_is_digit(char c);
-		bool	_check_search_input(std::string input);
-		void	_search_contact(int id);
-	public:
-		PhoneBook() {}
-		~PhoneBook() {
-			std::cout << "See you soon!" << std::endl;
-		}
-		int add_contact();
-		void welcome_menu();
-		void print_contact();
+private:
+	std::string _name;
+public:
+	void announce( void );
+	Zombie();
+	~Zombie();
 };
-#endif
+
+#endif 
