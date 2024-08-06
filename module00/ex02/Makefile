@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/31 23:54:37 by brguicho          #+#    #+#              #
-#    Updated: 2024/07/31 23:55:02 by brguicho         ###   ########.fr        #
+#    Updated: 2024/08/06 23:12:04 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,10 @@ NAME = PhoneBook
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAG) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAG) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(dir $(OBJS))
