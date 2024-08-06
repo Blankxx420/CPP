@@ -26,14 +26,10 @@ public:
 	static int	getNbAccounts( void );
 	static int	getTotalAmount( void );
 	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
+	static int	getNbWithdrawals( void );	
 	static void	displayAccountsInfos( void );
 
-	Account( int initial_deposit )
-	{
-		this->_accountIndex++;
-		this->_amount = initial_deposit;
-	};
+	Account( int initial_deposit );
 	~Account( void );
 
 	void	makeDeposit( int deposit );
@@ -56,11 +52,7 @@ private:
 	int				_nbDeposits;
 	int				_nbWithdrawals;
 
-	Account( void )
-	{
-		this->_accountIndex++;
-	};
-
+	Account( void );
 };
 
 
