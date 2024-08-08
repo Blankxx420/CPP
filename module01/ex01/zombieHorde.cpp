@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 00:27:09 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 22:18:13 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/07 22:34:11 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/07 23:09:37 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __ZOMBIE_H__
-#define __ZOMBIE_H__
+#include "Zombie.hpp"
+#include <sstream>
+#include <string>
 
-#include <iostream>
+std::string to_string(int value) {
+    std::ostringstream oss;
+    oss << value;
+    return oss.str();
+}
 
-class Zombie
+Zombie* zombieHorde( int N, std::string name )
 {
-private:
-	std::string _name;
-public:
-	void announce( void );
-	Zombie(std::string name);
-	Zombie();
-	~Zombie();
-};
-
-Zombie* newZombie( std::string name );
-
-void randomChump( std::string name );
-
-#endif 
+	Zombie	*horde = new Zombie[N];
+	
+	for (int i = 0; i < N; i++)
+	{
+		horde[i].set_name(name + " " + to_string(i + 1));
+		horde[i].announce();
+	}
+	return (&horde[0]);
+}

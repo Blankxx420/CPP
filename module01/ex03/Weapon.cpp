@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 00:32:24 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 22:19:51 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/08 12:36:17 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/08 23:55:56 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie(std::string name)
+Weapon::Weapon(std::string type): _type(type)
 {
-	this->_name = name;
+	std::cout << "Weapon: " + this->_type + " has been created" << std::endl;
 }
 
-Zombie::~Zombie()
+Weapon::~Weapon()
 {
-	std::cout << "R.I.P " << this->_name << std::endl;
+	std::cout << this->_type << " has been destroyed" << std::endl;
 }
 
-void	Zombie::announce()
+const std::string& Weapon::getType( void ) const
 {
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	const std::string &typeref = this->_type;
+	return (typeref);
+}
+
+void	Weapon::setType(std::string newtype)
+{
+	this->_type = newtype;
 }

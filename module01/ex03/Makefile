@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/07 22:13:04 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/07 23:45:28 by brguicho         ###   ########.fr        #
+#    Created: 2024/08/08 07:37:35 by brguicho          #+#    #+#              #
+#    Updated: 2024/08/08 23:51:53 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,16 +14,16 @@ CC = c++
 
 CFLAG = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	Zombie.cpp \
-		newZombie.cpp \
-		randomChump.cpp \
-		main.cpp
+SRCS = main.cpp \
+		Weapon.cpp\
+		HumanA.cpp \
+		HumanB.cpp
 
 OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = Ex00
+NAME = Ex03
 all : $(NAME)
 
 $(NAME) : $(OBJS)

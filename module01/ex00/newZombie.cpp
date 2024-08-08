@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 00:38:12 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 00:43:54 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/07 22:12:47 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Zombie* newZombie( std::string name )
 {
 	Zombie* zombie;
 
-	zombie = new Zombie;
+	zombie = new Zombie(name);
 	zombie->announce();
-	return (zombie)
+	return (zombie);
 }
