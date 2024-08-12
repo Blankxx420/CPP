@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:37:51 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 00:29:36 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 20:39:58 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class PhoneBook
 {
 	private:
 		Contact _contact[8];
-		int		_index = 0;
+		int		_index;
 		bool 	_is_digit(char c);
 		bool	_check_search_input(std::string input);
 		void	_search_contact(int id);

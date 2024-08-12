@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/08 22:03:48 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/12 20:37:21 by brguicho         ###   ########.fr        #
+#    Created: 2024/08/12 20:37:03 by brguicho          #+#    #+#              #
+#    Updated: 2024/08/12 20:37:15 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAG = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	megaphone.cpp
 		

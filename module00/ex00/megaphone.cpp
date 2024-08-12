@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:06:23 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/08 22:19:23 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 20:38:56 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main(int argc, char **argv)
 {
-	int 	j;
 	char	c;
 	
 	if (argc == 1)
@@ -24,8 +23,7 @@ int main(int argc, char **argv)
 	{
 		for (int i = 1; argv[i]; i++)
 		{
-			j = 0;
-			for (j; argv[i][j]; j++)
+			for (int j = 0; argv[i][j]; j++)
 			{
 				if (islower(argv[i][j]))
 					c = toupper(argv[i][j]);

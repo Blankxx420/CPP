@@ -6,13 +6,13 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/08 22:37:40 by brguicho          #+#    #+#              #
-#    Updated: 2024/07/10 23:36:14 by brguicho         ###   ########.fr        #
+#    Updated: 2024/08/12 20:37:40 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	Contact.cpp \
 		PhoneBook.cpp \

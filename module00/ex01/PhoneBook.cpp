@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 08:19:23 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/31 23:31:03 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 20:46:56 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,13 @@ bool	PhoneBook::_check_search_input(std::string input)
 		valid = false;
 		return (valid);
 	}
-	for (int i = 0; i < input.length(); i++)
+	for (long unsigned int i = 0; i < input.size(); i++)
 	{
 		if (_is_digit(input[i]) == false)
+		{
 			valid = false;
 			return (valid);
+		}
 	}
 	return (valid);
 }
@@ -87,7 +89,10 @@ void	PhoneBook::print_contact()
 		}
 	 	else
 		{
-			_search_contact(std::stoi(input));
+			std::stringstream ss(input);
+			int index;
+			ss >> index;
+			_search_contact(index);
 			break;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:46:12 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/31 23:16:22 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 20:46:45 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <cstring>
 #include <iomanip>
 #include <ios>
+#include <sstream>
 
 class Contact
 {
