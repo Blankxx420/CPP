@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 20:37:03 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/12 20:37:15 by brguicho         ###   ########.fr        #
+#    Updated: 2024/08/12 20:51:49 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,10 @@ NAME = megaphone
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAG) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(dir $(OBJS))

@@ -6,12 +6,12 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 22:30:25 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/08 23:25:03 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 22:13:52 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-#define HUMANA_H
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include <iostream>
 #include "Weapon.hpp"

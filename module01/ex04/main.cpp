@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 00:27:09 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/12 22:13:42 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/12 20:52:10 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/12 22:17:15 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __ZOMBIE_HPP
-#define __ZOMBIE_HPP
+#include "replace.hpp"
 
-#include <iostream>
-
-class Zombie
+int main (int argc, char **argv)
 {
-private:
-	std::string _name;
-
-public:
-	Zombie(std::string name);
-	Zombie();
-	~Zombie();
-	void	announce( void ) const;
-	void	set_name(std::string new_name);
-};
-
-Zombie* zombieHorde( int N, std::string name );
-
-#endif 
+	if (argc == 4)
+		replace(argv[1], argv[2], argv[3]);
+	else
+		std::cerr << "wrong number of arguments: expected 3 file , pattern to replace , and the replace pattern" << std::endl;
+	return (0);
+}

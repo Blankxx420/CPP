@@ -6,12 +6,12 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 12:28:13 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/08 12:52:45 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/12 22:14:05 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-#define WEAPON_H
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <iostream>
 
