@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 22:12:31 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/13 22:08:45 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/13 23:07:40 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/13 23:43:17 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-#define REPLACE_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 
 #include <iostream>
-#include <sstream>
-#include <fstream>
+#include <string>
 
-void	replace(char *filename, std::string to_replace,  std::string replacer);
+class Harl
+{
+	private:
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+		
+	public:
+		void complain( std::string level );
+		Harl();
+		~Harl();
+};
 
 #endif

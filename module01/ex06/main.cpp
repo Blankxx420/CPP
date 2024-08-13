@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 22:12:31 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/13 22:08:45 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/13 23:49:49 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/14 00:24:36 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-#define REPLACE_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-#include <sstream>
-#include <fstream>
-
-void	replace(char *filename, std::string to_replace,  std::string replacer);
-
-#endif
+int main(int argc, char **argv)
+{
+	Harl harl;
+	if (argc == 2)
+		harl.complain(argv[1]);
+	else
+		harl.complain("irrelevant string");
+	return (0);
+}
