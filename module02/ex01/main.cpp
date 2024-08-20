@@ -6,13 +6,14 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 01:32:06 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/18 13:46:50 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/20 10:05:45 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void ) {
+int main( void ) 
+{
 	
 	Fixed a;
 	Fixed const b( 10 );
@@ -20,7 +21,6 @@ int main( void ) {
 	Fixed const d( b );
 	
 	a = Fixed( 1234.4321f );
-	
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
 	std::cout << "c is " << c << std::endl;
