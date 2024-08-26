@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 22:51:16 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 13:50:05 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 13:52:33 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class ClapTrap
 		void			setHitPoint( unsigned int value );
 		void			setEnergy( unsigned int value );
 		void			setAttackDamage( unsigned int value );
+		void			setMaxHealth( unsigned int value);
 
 		//getter
 		std::string		getName( void ) const;
@@ -47,7 +48,7 @@ class ClapTrap
 		void 			attack( const std::string& target );
 		void 			takeDamage( unsigned int amount );
 		void 			beRepaired( unsigned int amount );
-		bool				checkEnergy( void );
+		bool			checkEnergy( void );
 };
 
 #endif

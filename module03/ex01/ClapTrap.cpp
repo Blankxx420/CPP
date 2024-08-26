@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 23:13:18 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 13:52:03 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 13:52:17 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ ClapTrap::ClapTrap():_name("default"), _hit_point(10), _energy_point(10), _attac
 	std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hit_point(10), _energy_point(10), _attack_damage(0)
+ClapTrap::ClapTrap(std::string name): _name(name), _hit_point(100), _energy_point(50), _attack_damage(20)
 {
-	std::cout << "string given constructor called" << std::endl;
+	std::cout << "Claptrap Default constructor called" << std::endl;
 	this->_max_health = _hit_point;
 }
 
@@ -65,6 +65,11 @@ void	ClapTrap::setEnergy(unsigned int value)
 void	ClapTrap::setAttackDamage(unsigned int value)
 {
 	this->_attack_damage = value;
+}
+
+void	ClapTrap::setMaxHealth(unsigned int value)
+{
+	this->_max_health = value;
 }
 
 //getters function
