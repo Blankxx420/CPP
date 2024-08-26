@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 15:01:15 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 23:18:17 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/26 22:00:06 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/26 22:16:11 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-int main()
+#include <iostream>
+
+class Animal
 {
-	ClapTrap cp ("Jack");
-	ClapTrap cp2 ("West");
-	ScavTrap scv ("John");
-	ScavTrap scv2 ("EAST");
-	DiamondTrap d ("Michel");
+	private:
 
-	scv = scv2;
+	protected:
+		std::string type;
+	public:
+		Animal();
+		Animal(std::string type);
+		Animal(const Animal &cpy);
+		~Animal();
+		Animal& operator = (const Animal &animal);
 
-	
-	cp.attack(scv.getName());
-	scv.attack(cp.getName());
-	scv.guardGate();
-}
+		void	setType(std::string value);
+		std::string	getType( void );
+		virtual void	MakeSound( void );
+};
+
+#endif

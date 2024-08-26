@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:25:58 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 14:37:18 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 23:59:53 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ DiamondTrap::DiamondTrap()
 DiamondTrap::DiamondTrap(const std::string name): ClapTrap(name + "_clap_name")
 {
 	this->setName(name);
-	this->setHitPoint(FragTrap::getHitPoint());
-	this->setEnergy(ScavTrap::getEnergy());
-	this->setAttackDamage(FragTrap::getAttackDamage());
+	this->setHitPoint(FragTrap::_hitPointsConst);
+	this->setEnergy(ScavTrap::_energyPointsConst);
+	this->setAttackDamage(FragTrap::_attackDamageConst);
 	std::cout << "DiamondTrap " << this->getName() << " created." << std::endl;
+	std::cout << "DiamondTrap has " << this->getAttackDamage() << std::endl;
 }
 
 DiamondTrap::~DiamondTrap(void)
@@ -32,7 +33,7 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap " << this->getName() << " destroyed." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const &copy): ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
+DiamondTrap::DiamondTrap(DiamondTrap const &copy): ClapTrap(copy), FragTrap(copy), ScavTrap(copy)
 {
 	std::cout << "DiamondTrap " << this->getName() << " copied." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:24:09 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 14:36:08 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 23:31:56 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class DiamondTrap : public FragTrap , public ScavTrap
 {
 	private:
 	

@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:58:11 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 14:29:18 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 00:00:27 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,9 @@ class FragTrap : public virtual ClapTrap
 		~FragTrap();
 		FragTrap & operator=(const FragTrap &FragTrap);
 		void	highFivesGuys(void);
+	protected:
+		const static int	_hitPointsConst = 100;
+		const static int	_energyPointsConst = 100;
+		const static int	_attackDamageConst = 30;
 };
 #endif

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 15:01:15 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 23:18:17 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/26 22:53:32 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/26 22:57:15 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#include "Dog.hpp"
 
-int main()
+Dog::Dog(): Animal("Dog")
 {
-	ClapTrap cp ("Jack");
-	ClapTrap cp2 ("West");
-	ScavTrap scv ("John");
-	ScavTrap scv2 ("EAST");
-	DiamondTrap d ("Michel");
+	std::cout << " Dog Default Constructor" << std::endl;
+}
 
-	scv = scv2;
-
-	
-	cp.attack(scv.getName());
-	scv.attack(cp.getName());
-	scv.guardGate();
+Dog::Dog(const Dog &cpy): Animal(cpy)
+{
+	std::cout << "Dog copy  Constructor" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 15:39:32 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 14:29:08 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 23:59:02 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,11 @@ class ScavTrap : public virtual ClapTrap
 		ScavTrap & operator=(const ScavTrap &scavtrap);
 		void	attack(const std::string& target);
 		void 	guardGate();
+		unsigned int	getenergy( void );
+		
+	protected:
+		const static int	_hitPointsConst = 100;
+		const static int	_energyPointsConst = 50;
+		const static int	_attackDamageConst = 20;
 };
 #endif

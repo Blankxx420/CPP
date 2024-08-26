@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 13:05:42 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/26 13:57:32 by brguicho         ###   ########.fr        #
+#    Updated: 2024/08/26 23:20:33 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CFLAG = -Wall -Wextra -Werror -std=c++98
 SRCS =	main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 		
 OBJ_DIR = object
 

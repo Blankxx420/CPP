@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 15:01:15 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 23:18:17 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/26 22:42:42 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/26 22:58:19 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main()
+#include "Animal.hpp"
+
+class Dog : public Animal
 {
-	ClapTrap cp ("Jack");
-	ClapTrap cp2 ("West");
-	ScavTrap scv ("John");
-	ScavTrap scv2 ("EAST");
-	DiamondTrap d ("Michel");
-
-	scv = scv2;
-
+	private:
 	
-	cp.attack(scv.getName());
-	scv.attack(cp.getName());
-	scv.guardGate();
-}
+	public:
+		Dog();
+		Dog(const Dog &cpy);
+		~Dog();
+		Dog& operator = (const Dog &dog);
+
+		void	MakeSound(void) override;
+		
+};
+
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:17:26 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 14:22:38 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/26 23:30:37 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,9 @@ void	ScavTrap::attack(const std::string &target)
 void 	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap is now in Gatekeeper mode" << std::endl;
+}
+
+unsigned int	ScavTrap::getenergy()
+{
+	return this->getEnergy();
 }
