@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 22:53:32 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 22:57:15 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/27 01:46:14 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/27 01:46:16 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef WRONG_CAT_HPP
+#define WRONG_CAT_HPP
 
-Dog::Dog(): Animal("Dog")
-{
-	std::cout << " Dog Default Constructor" << std::endl;
-}
+#include "WrongAnimal.hpp"
 
-Dog::Dog(const Dog &cpy): Animal(cpy)
+class WrongCat : public WrongAnimal
 {
-	std::cout << "Dog copy  Constructor" << std::endl;
-}
+	private:
+	
+	public:
+		WrongCat();
+		WrongCat(const WrongCat &cpy);
+		~WrongCat();
+		WrongCat& operator = (const WrongCat &Cat);
+
+		void	makeSound(void) const;	
+};
+#endif

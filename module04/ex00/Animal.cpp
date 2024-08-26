@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 22:02:51 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 22:53:14 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 01:17:28 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ void	Animal::setType(std::string value)
 	this->type = value;
 }
 
-std::string	Animal::getType( void )
+std::string	Animal::getType( void ) const
 {
 	return (this->type);
 }
 
-void	Animal::MakeSound( void )
+void	Animal::makeSound( void )const
 {
 	std::cout << "The animal make a sound" << std::endl;
 }
