@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 01:44:50 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 09:48:27 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/27 09:49:17 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/27 13:47:18 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONG_ANIMAL_HPP
-#define WRONG_ANIMAL_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-#include "iostream"
+#include <iostream>
 
-class WrongAnimal
+class Brain
 {
 	private:
-
-	protected:
-		std::string type;
+		std::string *_ideas;
+	
 	public:
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &cpy);
-		~WrongAnimal();
-		WrongAnimal& operator = (const WrongAnimal &animal);
 		
-		void			setType(std::string value);
-		std::string		getType( void ) const;
-		void			makeSound( void )const;
+		Brain();
+		Brain(Brain &cpy);
+		~Brain();
+		Brain& operator = (const Brain &brain);
+
+		std::string * getIdeas(void);
 };
 #endif

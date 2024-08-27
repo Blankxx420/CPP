@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 01:44:50 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 09:48:27 by brguicho         ###   ########.fr       */
+/*   Created: 2024/08/26 22:00:06 by brguicho          #+#    #+#             */
+/*   Updated: 2024/08/27 01:19:04 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONG_ANIMAL_HPP
-#define WRONG_ANIMAL_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-#include "iostream"
+#include <iostream>
 
-class WrongAnimal
+class Animal
 {
 	private:
 
 	protected:
 		std::string type;
 	public:
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &cpy);
-		~WrongAnimal();
-		WrongAnimal& operator = (const WrongAnimal &animal);
+		Animal();
+		Animal(std::string type);
+		Animal(const Animal &cpy);
+		virtual ~Animal();
+		Animal& operator = (const Animal &animal);
 		
-		void			setType(std::string value);
+		void		setType(std::string value);
 		std::string		getType( void ) const;
-		void			makeSound( void )const;
+		virtual void	makeSound( void )const;
 };
+
 #endif

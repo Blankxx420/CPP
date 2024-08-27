@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 01:44:50 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 09:48:27 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 01:44:52 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ class WrongAnimal
 		~WrongAnimal();
 		WrongAnimal& operator = (const WrongAnimal &animal);
 		
-		void			setType(std::string value);
+		void		setType(std::string value);
 		std::string		getType( void ) const;
-		void			makeSound( void )const;
+		void	makeSound( void )const;
 };
+
+
 #endif
