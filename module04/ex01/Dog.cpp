@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 22:53:32 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 20:05:54 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 21:47:55 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog(): Animal("Dog")
 	this->_brain = new Brain();
 }
 
-Dog::Dog(const Dog &cpy)
+Dog::Dog(const Dog &cpy): Animal(cpy)
 {
 	this->_brain = new Brain(*(cpy.getBrain()));
 	std::cout << "Dog copy Constructor" << std::endl;
@@ -26,6 +26,7 @@ Dog::Dog(const Dog &cpy)
 
 Dog::~Dog()
 {
+	delete _brain;
 	std::cout << "Dog destructor" << std::endl;	
 }
 

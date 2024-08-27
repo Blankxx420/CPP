@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 00:02:18 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 09:54:15 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 22:03:32 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Cat : public Animal
 		~Cat();
 		Cat& operator = (const Cat &Cat);
 
-		void	makeSound(void) const;	
+		void	makeSound(void) const;
+		Brain *	getBrain( void ) const;	
 };
 #endif

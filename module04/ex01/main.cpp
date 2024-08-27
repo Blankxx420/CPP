@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 00:24:41 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 01:18:25 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/27 22:04:23 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,28 @@ int main()
 	
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
 	j->makeSound();
+	i->makeSound();
 	meta->makeSound();
 
+	const Animal *Animalarray[4];
+	int index = 0;
+	for ( ; index < 2; index++)
+		Animalarray[index] = new Dog();
+	for ( ; index < 4; index++)
+		Animalarray[index] = new Cat();
+	
+	index = 0;
+	for (; index < 4; index++)
+	{
+		Animalarray[index]->getType();
+		Animalarray[index]->makeSound();
+	}
 	delete meta;
 	delete i;
 	delete j;
+	index = 0;
+	for (; index < 4; index++)
+		delete Animalarray[index];
 	return 0;
 }

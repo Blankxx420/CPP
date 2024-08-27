@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/27 00:16:07 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/27 00:16:39 by brguicho         ###   ########.fr        #
+#    Updated: 2024/08/27 21:59:03 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,9 @@ SRCS =	main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp\
+		Brain.cpp\
 		
 OBJ_DIR = object
 
