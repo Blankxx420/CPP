@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 00:00:16 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/28 00:56:55 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/29 01:10:58 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ICharacter;
 class AMateria
 {
 	protected:
-		const std::string	_type;
+		std::string	_type;
 	public:
 		AMateria();
 		AMateria(std::string const & type);

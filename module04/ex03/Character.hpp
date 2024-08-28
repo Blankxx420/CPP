@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 00:50:46 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/28 00:55:55 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/08/29 00:52:03 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Character : public ICharacter
 {
 	private:
-		AMateria			*(_inventory[4]);
+		AMateria			*_inventory[4];
 		std::string const	_name;
 	public:
 		Character(std::string name);
