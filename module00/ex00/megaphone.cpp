@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:06:23 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/12 20:38:56 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/09/04 10:17:20 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int main(int argc, char **argv)
 {
 	char	c;
-	
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else
