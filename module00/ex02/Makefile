@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/31 23:54:37 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/06 23:12:04 by brguicho         ###   ########.fr        #
+#    Updated: 2024/09/11 14:15:58 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = PhoneBook
+NAME = account
 all : $(NAME)
 
 $(NAME) : $(OBJS)

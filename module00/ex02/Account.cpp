@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 23:55:51 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/07 00:16:04 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/09/11 14:15:15 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ void	Account::makeDeposit( int deposit)
 	std::cout << "index:" << this->_accountIndex 
 			  << ";p_amount:" << p_amount
 			  << ";deposit:" << deposit
+			  << ";amount:" << this->checkAmount()
 			  << ";nb_deposits:" << this->_nbDeposits
 			  << std::endl;
 }
@@ -152,6 +153,7 @@ bool	Account::makeWithdrawal( int withdrawal )
 		std::cout << "index:" << this->_accountIndex 
 			  << ";p_amount:" << p_amount
 			  << ";withdrawal:" << withdrawal
+			  << ";amount:" << this->checkAmount()
 			  << ";nb_withdrawals:" << this->_nbWithdrawals
 			  << std::endl;
 	}

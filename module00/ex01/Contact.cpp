@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 23:13:44 by brguicho          #+#    #+#             */
-/*   Updated: 2024/07/31 23:17:57 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/09/11 14:12:40 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,16 +79,16 @@ int  Contact::init_contact()
 std::string Contact::_truncate(std::string str, size_t width)
 {
 	 if (str.length() > width)
-            return str.substr(0, width) + ".";
+            return str.substr(0, width - 1) + ".";
     return str;
 }
 
 void	Contact::print_basic_information(int index)
 {
-	std::cout	<< "|" << std::setw(5) << std::setfill(' ') << index << std::setw(5)
-				<< "|" << std::setw(11) << std::setfill(' ') << _truncate(this->_firstname, 10) << std::setw(11)
-				<< "|" << std::setw(11) << std::setfill(' ') << _truncate(this->_lastname, 10)  << std::setw(11)
-				<< "|" << std::setw(11) << std::setfill(' ') << _truncate(this->_nickname, 10) << std::setw(11) << "|" << std::endl;
+	std::cout	<< "|" << std::setw(10) << std::setfill(' ') << index
+				<< "|" << std::setw(10) << std::setfill(' ') << _truncate(this->_firstname, 10)
+				<< "|" << std::setw(10) << std::setfill(' ') << _truncate(this->_lastname, 10)
+				<< "|" << std::setw(10) << std::setfill(' ') << _truncate(this->_nickname, 10) << "|" << std::endl;
 }
 
 void	Contact::print_all_information()
@@ -98,9 +98,9 @@ void	Contact::print_all_information()
 		std::cerr << "No Contact at this ID" << std::endl;
 		return ;
 	}
-	std::cout << "Firstname:" << this->_firstname  << std::setw(5) << std::endl;
-	std::cout << "Lastname:" << this->_lastname  << std::setw(5) << std::endl;
-	std::cout << "Nickname:" << this->_nickname  << std::setw(5) << std::endl;
-	std::cout << "Phone number:" << this->_phone_number  << std::setw(5) << std::endl;
-	std::cout << "Darkest secret:" << this->_darkest_secret  << std::setw(5) << std::endl;
+	std::cout << "Firstname: " << this->_firstname << std::endl;
+	std::cout << "Lastname: " << this->_lastname << std::endl;
+	std::cout << "Nickname: " << this->_nickname << std::endl;
+	std::cout << "Phone number: " << this->_phone_number << std::endl;
+	std::cout << "Darkest secret: " << this->_darkest_secret << std::endl;
 }

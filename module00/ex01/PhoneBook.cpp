@@ -6,11 +6,21 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 08:19:23 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/12 20:46:56 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:54:04 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook()
+{
+	this->_index = 0;
+}
+
+PhoneBook::~PhoneBook()
+{
+	std::cout << "See you soon!" << std::endl;
+}
 
 int	PhoneBook::add_contact()
 {
@@ -74,12 +84,12 @@ void	PhoneBook::_search_contact(int id)
 void	PhoneBook::print_contact()
 {
 	std::string	input;
-	std::cout << "-----------------------------------------------------------------------------" << std::endl;
-	std::cout << "|    Id   |       Firstname     |       Lastname      |       Nickname      |" << std::endl;
-	std::cout << "-----------------------------------------------------------------------------" << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
+	std::cout << "|        Id| Firstname|  Lastname|  Nickname|" << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
 	for (int i = 0 ; i < 8; i++)
 		this->_contact[i].print_basic_information(i);
-	std::cout << "-----------------------------------------------------------------------------" << std::endl << std::endl;
+	std::cout << "---------------------------------------------" << std::endl << std::endl;
 	std::cout << "Type the Id of the contact you search" << std::endl;
 	while (std::getline(std::cin, input) && !std::cin.eof())
 	{

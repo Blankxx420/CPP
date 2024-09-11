@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 22:37:51 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/12 20:39:58 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:52:52 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ class PhoneBook
 		bool	_check_search_input(std::string input);
 		void	_search_contact(int id);
 	public:
-		PhoneBook() {}
-		~PhoneBook() {
-			std::cout << "See you soon!" << std::endl;
-		}
+		PhoneBook();
+		~PhoneBook();
 		int add_contact();
 		void welcome_menu();
 		void print_contact();
