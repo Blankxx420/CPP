@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 23:39:18 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/08 23:54:55 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:19:28 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ void	HumanB::setWeapon(Weapon &weapon)
 
 void	HumanB::attack()
 {
-	std::cout << this->_name + " attacks with their " + this->_weapon->getType() << std::endl;
+	if (_weapon)
+		std::cout << this->_name + " attacks with their " + this->_weapon->getType() << std::endl;
+	else
+		std::cout << this->_name + " must grab a weapon first"<< std::endl;
 }
