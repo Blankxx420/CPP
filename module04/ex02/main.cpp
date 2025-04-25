@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 00:24:41 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/27 23:44:28 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/01/07 09:39:08 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ int main()
 {
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
+	const Dog*	  dog = new Dog();
+	
 	
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	j->makeSound();
 	i->makeSound();
+	std::cout << dog->getBrain()->getIdeas()[55] << std::endl;
 
 	const Animal *Animalarray[4];
 	int index = 0;
@@ -38,6 +41,7 @@ int main()
 	}
 	delete i;
 	delete j;
+	delete dog;
 	index = 0;
 	for (; index < 4; index++)
 		delete Animalarray[index];

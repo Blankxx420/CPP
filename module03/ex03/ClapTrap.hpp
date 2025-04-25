@@ -29,7 +29,7 @@ class ClapTrap
 		ClapTrap();
 		ClapTrap( const std::string name );
 		ClapTrap( const ClapTrap &cpy );
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap& 		operator= ( const ClapTrap &claptrap );
 
 		//setters

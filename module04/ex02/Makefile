@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/27 00:16:07 by brguicho          #+#    #+#              #
-#    Updated: 2024/08/27 21:59:03 by brguicho         ###   ########.fr        #
+#    Updated: 2025/01/07 09:39:24 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = Ex01
+NAME = Ex02
 
 all : $(NAME)
 

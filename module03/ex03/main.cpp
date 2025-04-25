@@ -23,9 +23,13 @@ int main()
 	DiamondTrap d ("Michel");
 
 	scv = scv2;
-
+	ClapTrap *ptr = new DiamondTrap("dawdawiudawd"); 
 	
 	cp.attack(scv.getName());
 	scv.attack(cp.getName());
 	scv.guardGate();
+	d.attack(cp.getName());
+	d.whoAmI();
+	
+	delete ptr;
 }

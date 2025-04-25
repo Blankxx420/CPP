@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:24:09 by brguicho          #+#    #+#             */
-/*   Updated: 2024/08/26 23:31:56 by brguicho         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:14:33 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class DiamondTrap : public FragTrap , public ScavTrap
 {
 	private:
-	
+		std::string _name;	
 	public:
 		DiamondTrap();
 		DiamondTrap(const std::string name);
