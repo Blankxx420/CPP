@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 22:43:23 by brguicho          #+#    #+#             */
-/*   Updated: 2025/04/22 23:50:24 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/04/29 01:42:15 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class AForm
 
 		//member function
 		void beSigned(Bureaucrat &bureaucrat);
-		virtual void	execute(Bureaucrat const &bureaucrat) const = 0;
+		virtual void	execute(Bureaucrat const &executor) const = 0;
 		
 		class GradeTooHighException: public std::exception
 		{

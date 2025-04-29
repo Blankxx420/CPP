@@ -1,12 +1,12 @@
 #include "ShrubberyCreationForm.hpp"
 #include "Bureaucrat.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(): AForm::AForm("PresideantialPardonForm", 25, 5), _target(NULL)
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm::AForm("ShrubberyCreationForm", 25, 5), _target(NULL)
 {
 	std::cout << "ShrubberyCreationForm Default constructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target): AForm::AForm("PresideantialPardonForm", 25, 5), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target): AForm::AForm("ShrubberyCreationForm", 25, 5), _target(target)
 {
 	std::cout << "ShrubberyCreationForm Default constructor called" << std::endl;
 }
@@ -30,19 +30,23 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	std::cout << "ShrubberyCreationForm Destructor called" << std::endl;
 }
 
-void	ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const
+void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	std::ofstream	outfile;
 	
+	if (this->get_Is_Signed() == false)
+		throw (ShrubberyCreationForm::IsNotSignedException());
+	else if (executor.getGrade() > this->get_Grade_To_Execute())
+		throw  (Bureaucrat::GradeTooLowException());
 	outfile.open((this->_target + "_shrubbery").c_str());
 	if (outfile.fail())
 	{
-		std::cout << "Could not open output file" << std::endl;
+		std::cerr << "Could not open output file" << std::endl;
 		return ;
 	}
 	outfile << TREE;
 	outfile.close();
-	std::cout << bureaucrat.getName() << " successfully created a shrubbery" << std::endl;
+	std::cout << executor.getName() << " successfully created a shrubbery" << std::endl;
 }
 
 std::ostream	&operator<<(std::ostream &str, ShrubberyCreationForm const &form)

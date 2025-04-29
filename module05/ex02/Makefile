@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:41:35 by brguicho          #+#    #+#              #
-#    Updated: 2025/02/03 21:08:54 by brguicho         ###   ########.fr        #
+#    Updated: 2025/04/29 01:04:49 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAG = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp \
 		Bureaucrat.cpp \
-		Form.cpp \
+		AForm.cpp \
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \
 		ShrubberyCreationForm.cpp \
@@ -26,7 +26,7 @@ OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = ex01
+NAME = ex02
 
 all : $(NAME)
 

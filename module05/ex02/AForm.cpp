@@ -82,11 +82,11 @@ char const	*AForm::GradeTooLowException::what(void) const throw()
 
 char const *AForm::AlreadySignedException::what(void) const throw()
 {
-	return ("AForm is Already signed");
+	return ("Form is Already signed");
 }
 char const *AForm::IsNotSignedException::what(void) const throw()
 {
-	return ("AForm is not signed");
+	return ("Form is not signed");
 }
 
 std::ostream	&operator<<(std::ostream &str, AForm const &form)

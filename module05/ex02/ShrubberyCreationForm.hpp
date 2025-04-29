@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 20:45:44 by brguicho          #+#    #+#             */
-/*   Updated: 2025/02/03 21:07:13 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/04/29 02:05:03 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <fstream>
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
 #define TREE "    *\n   /.\\\n  /o..\\\n /..o\\\n /.o..o\\\n /...o.\\\n/..o....\\\n^^^[_]^^^\n"
 
@@ -32,7 +33,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& copied);
 		~ShrubberyCreationForm();
 		
-		void execute(Bureaucrat const &bureaucrat) const;
+		void execute(Bureaucrat const &executor) const;
 };
 std::ostream	&operator<<(std::ostream &str, ShrubberyCreationForm const &form);
 #endif

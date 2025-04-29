@@ -1,11 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm::AForm("PresideantialPardonForm", 72, 45), _target(NULL)
+RobotomyRequestForm::RobotomyRequestForm(): AForm::AForm("RobotomyRequestForm", 72, 45), _target(NULL)
 {
 	std::cout << "RobotomyRequestForm Default constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string const &target): AForm::AForm("PresideantialPardonForm", 72, 45), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string const &target): AForm::AForm("RobotomyRequestForm", 72, 45), _target(target)
 {
 	std::cout << "RobotomyRequestForm Default constructor called" << std::endl;
 }
@@ -29,13 +29,15 @@ RobotomyRequestForm::~RobotomyRequestForm()
 	std::cout << "RobotomyRequestForm Destructor called" << std::endl;
 }
 
-void	RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const
-{
+void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{ 	
 	int	success;
-
+	if (this->get_Is_Signed() == false)
+		throw (RobotomyRequestForm::IsNotSignedException());
+	else if (executor.getGrade() > this->get_Grade_To_Execute())
+		throw  (Bureaucrat::GradeTooLowException());
 	srand((unsigned) time(NULL));
 	success = rand() % 2;
-	(void)bureaucrat;
 	if (success)
 		std::cout << this->_target << " has been robotomized successfully" << std::endl;
 	else

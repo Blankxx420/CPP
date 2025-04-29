@@ -2,6 +2,7 @@
 #define PresidentialPardonForm_HPP
 
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
 class PresidentialPardonForm: public AForm
 {
@@ -16,7 +17,7 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& copied);
 		~PresidentialPardonForm();
 		
-		void execute(Bureaucrat const &bureaucrat) const;
+		void execute(Bureaucrat const & executor) const;
 };
 
 std::ostream	&operator<<(std::ostream &str, PresidentialPardonForm const &form);
