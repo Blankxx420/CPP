@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 08:41:35 by brguicho          #+#    #+#              #
-#    Updated: 2025/04/29 09:47:19 by brguicho         ###   ########.fr        #
+#    Updated: 2025/04/30 23:04:27 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS =	main.cpp \
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \
 		ShrubberyCreationForm.cpp \
+		Intern.cpp
 		
 		
 OBJ_DIR = object
