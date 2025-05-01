@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 10:20:36 by brguicho          #+#    #+#             */
-/*   Updated: 2025/04/30 23:38:07 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/01 00:00:00 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Intern::~Intern()
 AForm * Intern::makeForm(std::string form_to_create, std::string target)
 {
 	int i = 0;
-	AForm *form;
+	AForm *form = NULL;
 	std::string form_name[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
 	while (i < 4 && form_name[i].compare(form_to_create) != 0)
 		i++;
@@ -53,11 +53,11 @@ AForm * Intern::makeForm(std::string form_to_create, std::string target)
 		case 2:
 			form = new PresidentialPardonForm(target);
 			break;
+		default:
+			throw (Intern::UnknowFormException());
 	}
 	if (form)
 		std::cout << "Intern creates " << form->getName() << std::endl;
-	else
-		throw (Intern::UnknowFormException());
 	return (form);
 }
 

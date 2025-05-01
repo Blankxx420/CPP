@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 08:51:41 by brguicho          #+#    #+#             */
-/*   Updated: 2025/04/30 23:42:33 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/01 00:00:14 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int	main(void)
 	delete robo_form;
 	delete shrub_form;
 	delete president_form;
-	delete unknown_form;
 	return (0);
 	//-------------------------------------------------------	
 }
