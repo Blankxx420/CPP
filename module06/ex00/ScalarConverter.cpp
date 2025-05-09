@@ -6,24 +6,20 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:38:21 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/06 01:37:26 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:02:27 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter(){};
-
-ScalarConverter::ScalarConverter(const ScalarConverter &rhs)
-{
-	*this = rhs; 
-}
-ScalarConverter::~ScalarConverter(){};
-
+ScalarConverter::ScalarConverter() {}
+ScalarConverter::ScalarConverter(const ScalarConverter& rhs) { (void)rhs; }
+ScalarConverter& ScalarConverter::operator=(const ScalarConverter& rhs) { (void)rhs; return *this; }
+ScalarConverter::~ScalarConverter() {}
 
 void ScalarConverter::convert(const std::string &literal)
 {
-	LiteralType type = detect_type(literal);
+	int type = detect_type(literal);
     
     switch (type)
 	{

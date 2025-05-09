@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/17 10:17:32 by brguicho          #+#    #+#              #
-#    Updated: 2025/05/06 13:12:54 by brguicho         ###   ########.fr        #
+#    Created: 2025/05/09 07:27:33 by brguicho          #+#    #+#              #
+#    Updated: 2025/05/09 07:28:35 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,15 +14,14 @@ CC = c++
 
 CFLAG = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	ScalarConverter.cpp \
-		utils.cpp \
+SRCS =	Base.cpp \
 		main.cpp
 
 OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = Ex00
+NAME = Ex02
 all : $(NAME)
 
 $(NAME) : $(OBJS)

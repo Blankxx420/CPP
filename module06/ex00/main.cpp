@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/08 18:28:39 by brguicho          #+#    #+#             */
+/*   Updated: 2025/05/08 18:28:41 by brguicho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScalarConverter.hpp"
 #include <iostream>
 #include <string>
@@ -9,17 +21,8 @@ void displayHeader(const std::string& literal) {
 }
 
 int main(int argc, char **argv) {
-	if (argc != 2) {
-		std::cout << "Usage: " << argv[0] << " <literal>" << std::endl;
-		std::cout << "Examples: '0', '42', '4.2f', '4.2', 'c', 'nan', '+inf', '-inf', 'nanf', '+inff', '-inff'" << std::endl;
-		return 1;
-	}
 
-	std::string input = argv[1];
-	
-	displayHeader(input);
-	ScalarConverter::convert(input);
-	
+	(void)argv; 
 	if (argc == 1) {
 		displayHeader("'c'");
 		ScalarConverter::convert("'c'");
