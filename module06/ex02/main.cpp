@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 09:49:18 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/09 10:44:17 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/09 13:36:30 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,32 @@
 
 int main(void)
 {
-	srand(time(NULL));
+	srand((unsigned int) time(NULL));
 	Base * null_ptr = NULL;
+	std::cout << "\n=== Testing with generated objects ===" << std::endl;
 	for (int i = 0; i < 5; i++)
 	{
-		Base * random_ptr1;
-		Base * random_ptr2;
-		random_ptr1 = generate();
-		random_ptr2 = generate();
+		std::cout << "\nTest " << i+1 << ":" << std::endl;
+		Base *random_ptr1 = generate();
+		Base *random_ptr2 = generate();
 		
-		std::cout << "identification by pointer" << std::endl;
+		std::cout << "Identification by pointer:" << std::endl;
 		identify(random_ptr1);
 		identify(random_ptr2);
 		
-		std::cout << "indentification by reference" << std::endl;
+		std::cout << "Identification by reference:" << std::endl;
 		identify(*random_ptr1);
 		identify(*random_ptr2);
-		delete random_ptr1, random_ptr2;
+		
+		delete random_ptr1;
+		delete random_ptr2;
 	}
-	identify(null_ptr);
-	identify(*null_ptr);
 	
+	std::cout << "\n=== Testing NULL pointer ===" << std::endl;
+	identify(null_ptr);
+	
+	// Le code suivant provoquerait une erreur de segmentation, donc on le commente
+	// identify(*null_ptr);  // Déréférencer un pointeur NULL provoque un crash
+	
+	return 0;
 }

@@ -6,11 +6,14 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:29:03 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/09 11:10:42 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/09 13:39:43 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
 Base::~Base(){}
 
@@ -22,11 +25,11 @@ Base*	generate(void)
 	switch (random_number)
 	{
 	case 0:
-		return	(new A());
+		return new A();
 	case 1:
-		return (new B());
+		return new B();
 	case 2:
-		return (new C());
+		return new C();
 	default:
 		std::cerr << "generate fail" << std::endl;
 		return (NULL);
@@ -35,14 +38,19 @@ Base*	generate(void)
 
 void	identify(Base *p)
 {
-	if (dynamic_cast<A *>(p) != nullptr)
+	if (p == NULL)
+	{
+		std::cerr << "Pointer is NULL" << std::endl;
+		return;
+	}
+	if (dynamic_cast<A *>(p) != NULL)
 		std::cout << "type of object is A" << std::endl;
-	else if (dynamic_cast<B *>(p) != nullptr)
+	else if (dynamic_cast<B *>(p) != NULL)
 		std::cout << "type of object is B" << std::endl;
-	else if (dynamic_cast<B *>(p) != nullptr)
-		std::cout << "type of object is B" << std::endl;
+	else if (dynamic_cast<C *>(p) != NULL)
+		std::cout << "type of object is C" << std::endl;
 	else
-		std::cerr << "type objec is unknown";
+		std::cerr << "type object is unknown" << std::endl;
 }
 
 void	identify(Base& p)
@@ -71,7 +79,7 @@ void	identify(Base& p)
 			}
 			catch(std::bad_cast &e)
 			{
-				std::cerr << "Can't cast unknown type" << e.what() << std::endl;
+				std::cerr << "Can't cast unknown type" << std::endl;
 			}
 		}
 	}

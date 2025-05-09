@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:29:09 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/09 11:09:32 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/09 13:19:57 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 
 #include "Base.hpp"
 
-class C : public Base 
-{
-	
-};
+class C : public Base {};
 
 #endif
