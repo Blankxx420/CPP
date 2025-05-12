@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 09:20:09 by brguicho          #+#    #+#             */
-/*   Updated: 2025/01/31 16:09:13 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/12 10:22:25 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,11 @@ Bureaucrat::Bureaucrat(const Bureaucrat& copied)
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& copied)
 {
 	std::cout << "Bureaucrat Assignation operator called" << std::endl;
-	this->_grade = copied.getGrade();
-	this->_name = copied.getName();
+	if (this != &copied)
+	{	
+		this->_grade = copied.getGrade();
+		this->_name = copied.getName();
+	}
 	return *this;
 }
 

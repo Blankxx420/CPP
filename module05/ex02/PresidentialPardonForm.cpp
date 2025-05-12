@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 20:38:30 by brguicho          #+#    #+#             */
-/*   Updated: 2025/04/29 02:06:17 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/12 10:40:45 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 {
 	std::cout << "PresidentialPardonForm Assignation operator called" << std::endl;
 	AForm::operator=(copied);
-	this->_target = copied._target;
+	if (this != &copied)
+	{
+		this->_target = copied._target;
+	}
 	return *this;
 }
 

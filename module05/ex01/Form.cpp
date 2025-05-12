@@ -29,7 +29,10 @@ Form::Form(const Form& copied):_name(copied._name), _is_signed(copied._is_signed
 Form& Form::operator=(const Form& copied)
 {
 	std::cout << "Form Assignation operator called" << std::endl;
-	this->_is_signed = copied._is_signed;
+	if (this != &copied)
+	{
+		this->_is_signed = copied._is_signed;
+	}
 	return *this;
 }
 

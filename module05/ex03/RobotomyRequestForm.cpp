@@ -20,7 +20,10 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& c
 {
 	std::cout << "RobotomyRequestForm Assignation operator called" << std::endl;
 	AForm::operator=(copied);
-	this->_target = copied._target;
+	if (this != &copied)
+	{
+		this->_target = copied._target;
+	}
 	return *this;
 }
 

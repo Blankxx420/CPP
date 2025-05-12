@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 08:51:41 by brguicho          #+#    #+#             */
-/*   Updated: 2025/04/29 09:46:28 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/12 09:30:30 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int main(void)
 {
+	srand((unsigned) time(NULL));
 	try
 	{
 		Bureaucrat Harry("Harry", 45);

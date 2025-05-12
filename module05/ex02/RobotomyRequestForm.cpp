@@ -20,7 +20,10 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& c
 {
 	std::cout << "RobotomyRequestForm Assignation operator called" << std::endl;
 	AForm::operator=(copied);
-	this->_target = copied._target;
+	if (this != &copied)
+	{
+		this->_target = copied._target;
+	}
 	return *this;
 }
 
@@ -36,7 +39,6 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		throw (RobotomyRequestForm::IsNotSignedException());
 	else if (executor.getGrade() > this->get_Grade_To_Execute())
 		throw  (Bureaucrat::GradeTooLowException());
-	srand((unsigned) time(NULL));
 	success = rand() % 2;
 	if (success)
 		std::cout << this->_target << " has been robotomized successfully" << std::endl;
