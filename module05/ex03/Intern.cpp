@@ -40,7 +40,7 @@ AForm * Intern::makeForm(std::string form_to_create, std::string target)
 	int i = 0;
 	AForm *form = NULL;
 	std::string form_name[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-	while (i < 4 && form_name[i].compare(form_to_create) != 0)
+	while (i < 3 && form_name[i].compare(form_to_create) != 0)
 		i++;
 	switch (i)
 	{
