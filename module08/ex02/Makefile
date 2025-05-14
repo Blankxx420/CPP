@@ -20,7 +20,7 @@ OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = Ex02
+NAME = ex02
 all : $(NAME)
 
 $(NAME) : $(OBJS)
