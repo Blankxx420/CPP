@@ -6,7 +6,7 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/08 18:27:31 by brguicho          #+#    #+#              #
-#    Updated: 2025/05/13 13:46:02 by brguicho         ###   ########.fr        #
+#    Updated: 2025/05/18 23:41:23 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ CC = c++
 
 CFLAG = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp
+SRCS =	Span.cpp \
+		main.cpp
 
 OBJ_DIR = object
 
