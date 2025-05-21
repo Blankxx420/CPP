@@ -6,15 +6,15 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:28:48 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/21 11:13:22 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/21 11:22:10 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
 
-bool is_float_abs(double nombre) {
-    return (floor(nombre) == nombre);
+bool is_float_abs(double number) {
+    return (floor(number) == number);
 }
 
 bool is_char(const std::string &literal)
