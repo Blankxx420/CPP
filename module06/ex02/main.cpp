@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 09:49:18 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/09 13:36:30 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/20 11:17:06 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ int main(void)
 	std::cout << "\n=== Testing NULL pointer ===" << std::endl;
 	identify(null_ptr);
 	
-	// Le code suivant provoquerait une erreur de segmentation, donc on le commente
-	// identify(*null_ptr);  // Déréférencer un pointeur NULL provoque un crash
+	// identify(*null_ptr);  // crash
 	
 	return 0;
 }

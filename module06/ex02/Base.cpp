@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:29:03 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/09 13:39:43 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/21 10:12:57 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	identify(Base& p)
 		(void)a;
 		std::cout << "type of object is A" << std::endl;
 	}
-	catch(std::bad_cast &e)
+	catch(std::exception &e)
 	{
 		try
 		{
@@ -69,7 +69,7 @@ void	identify(Base& p)
 			(void)b;
 			std::cout << "type of object is B" << std::endl;
 		}
-		catch(std::bad_cast &e)
+		catch(std::exception &e)
 		{
 			try
 			{
@@ -77,7 +77,7 @@ void	identify(Base& p)
 				(void)c;
 				std::cout << "type of object is C" << std::endl;
 			}
-			catch(std::bad_cast &e)
+			catch(std::exception &e)
 			{
 				std::cerr << "Can't cast unknown type" << std::endl;
 			}

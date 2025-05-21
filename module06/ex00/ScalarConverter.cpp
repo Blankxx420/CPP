@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:38:21 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/06 14:02:27 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/21 10:47:10 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void ScalarConverter::convert(const std::string &literal)
 {
 	int type = detect_type(literal);
     
+    std::cout << "type: "<< type << std::endl;
     switch (type)
 	{
         case CHAR:
