@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 09:13:10 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/22 22:23:17 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/25 22:24:08 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,11 @@ class BitcoinExchange
 		~BitcoinExchange();
 
 		void	parse_file(std::string file, std::map<std::string, float> map);
-		bool	check_input_file_data(std::string file);
-		float	find_exchange_rate_by_date(std::string file);
-		std::map<std::string, float> get_map(void);
+		bool	check_date_format(std::string date);
+		bool	check_value_format(float value);
+		void	find_exchange_rate_by_date(std::map<std::string, float> database,  std::map<std::string, float> input_data);
+		std::map<std::string, float> get_database_data(void);
+		std::map<std::string, float> get_input_file_data(void);
 		
 		class FileErrorException: public std::exception
 		{
