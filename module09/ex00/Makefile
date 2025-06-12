@@ -6,13 +6,13 @@
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/19 13:25:04 by brguicho          #+#    #+#              #
-#    Updated: 2025/05/19 13:25:37 by brguicho         ###   ########.fr        #
+#    Updated: 2025/05/26 09:24:32 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CFLAG = -Wall -Wextra -Werror -g -std=c++98
 
 SRCS =	BitcoinExchange.cpp \
 		main.cpp

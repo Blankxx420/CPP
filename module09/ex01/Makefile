@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/13 08:45:44 by brguicho          #+#    #+#              #
-#    Updated: 2025/06/12 14:06:47 by brguicho         ###   ########.fr        #
+#    Created: 2025/06/09 09:32:26 by brguicho          #+#    #+#              #
+#    Updated: 2025/06/09 09:32:42 by brguicho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAG = -Wall -Wextra -Werror -std=c++98
+CFLAG = -Wall -Wextra -Werror -g -std=c++98
 
-SRCS =	main.cpp
+SRCS = main.cpp
 
 OBJ_DIR = object
 
 OBJS =  $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = ex00
+NAME = RPN
 all : $(NAME)
 
 $(NAME) : $(OBJS)

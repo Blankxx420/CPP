@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:14:55 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/25 23:05:05 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/06/03 09:14:37 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ BitcoinExchange::BitcoinExchange(): _file(NULL), _database("data.csv")
 BitcoinExchange::BitcoinExchange(std::string file): _file(file), _database("data.csv")
 {
 	std::cout << "Constructor called" << std::endl;
+	parse_database_file();
+	parse_input_file();
 }
 
 BitcoinExchange::~BitcoinExchange()
@@ -44,9 +46,41 @@ BitcoinExchange& BitcoinExchange::operator=(BitcoinExchange const & copied)
 	return (*this);
 }
 
-void BitcoinExchange::parse_file(std::string file, std::map<std::string, float> map)
+void BitcoinExchange::parse_database_file()
 {
-	std::ifstream stream(file.c_str());
+    std::ifstream stream(_database.c_str());
+    std::string buffer;
+    std::string key;
+    std::string value;
+    size_t pos;
+    float floatValue;
+
+    if (!stream.good())
+        throw (BitcoinExchange::FileErrorException());
+
+    if (std::getline(stream, buffer)) {
+    }
+    
+    while (std::getline(stream, buffer))
+    {
+        if (buffer.empty())
+            continue;
+            
+        pos = buffer.find(',');
+        if (pos != std::string::npos)
+        {
+            key = buffer.substr(0, pos);
+            value = buffer.substr(pos + 1);
+            floatValue = std::atof(value.c_str());
+            _database_data.insert(std::pair<std::string, float>(key, floatValue));
+        }
+    }
+    stream.close();
+}
+
+void BitcoinExchange::parse_input_file()
+{
+	std::ifstream stream(_file.c_str());
 	std::string buffer;
 	std::string key;
 	std::string value;
@@ -55,19 +89,25 @@ void BitcoinExchange::parse_file(std::string file, std::map<std::string, float> 
 
 	if (!stream.good())
 		throw (BitcoinExchange::FileErrorException());
+
+	if (std::getline(stream, buffer)) {
+		
+	}
 	while (std::getline(stream, buffer))
 	{
-		if (buffer.find_first_of("date") || buffer[0] == '\n')
-			std::getline(stream, buffer);
-		pos = buffer.find(',');
+		if (buffer.empty())
+			continue;
+			
+		pos = buffer.find(" | ");
 		if (pos != std::string::npos)
 		{
 			key = buffer.substr(0, pos);
-			value = buffer.substr(pos + 1);
+			value = buffer.substr(pos + 3);
 			floatValue = std::atof(value.c_str());
-			map.insert(std::pair<std::string, float>(key, floatValue));
+			_input_file_data.insert(std::pair<std::string, float>(key, floatValue));
 		}
 	}
+	stream.close();
 }
 
 char const *BitcoinExchange::FileErrorException::what() const throw ()
@@ -97,6 +137,7 @@ bool	BitcoinExchange::check_value_format(float value)
 		std::cerr << "Error: too large number." << std::endl;
 		return (false);
 	}
+	return true;
 }
 
 bool	BitcoinExchange::check_date_format(std::string date)
@@ -110,7 +151,7 @@ bool	BitcoinExchange::check_date_format(std::string date)
 		std::cerr << "Error : bad input => " << date <<std::endl;
 		return false;
 	}
-	for (int i = 0; date[i] != NULL; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		if ((i == 4 || i == 7) && date[i] != '-')
 		{
@@ -123,11 +164,10 @@ bool	BitcoinExchange::check_date_format(std::string date)
 			return false;
 		}
 	}
-	
 	years = std::atoi(date.substr(0, 4).c_str());
 	months = std::atoi(date.substr(5, 7).c_str());
 	days = std::atoi(date.substr(8, 10).c_str());
-	
+	return true;
 }
 void	BitcoinExchange::find_exchange_rate_by_date(std::map<std::string, float> database,  std::map<std::string, float> input_data)
 {

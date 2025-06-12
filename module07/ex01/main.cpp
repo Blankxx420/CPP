@@ -1,27 +1,23 @@
 #include <iostream>
 #include <string>
-#include "iter.hpp"  // Je suppose que votre template est dans ce fichier
+#include "iter.hpp"
 
-// Fonction pour afficher un int
 void printInt(int n)
 {
 	std::cout << n << " ";
 }
 
-// Fonction pour afficher un char
 void printChar(char c)
 {
 	std::cout << c << " ";
 }
 
-// Fonction template pour afficher n'importe quel type
 template<typename T>
 void print(T const &x)
 {
 	std::cout << x << " ";
 }
 
-// Fonction pour modifier un int
 void incrementInt(int &n)
 {
 	n += 1;
@@ -30,12 +26,12 @@ void incrementInt(int &n)
 int main()
 {
 	int intArray[5] = {1, 2, 3, 4, 5};
-	std::cout << "Tableau d'entiers: ";
+	std::cout << "Array of int: ";
 	iter(intArray, 5, printInt);
 	std::cout << std::endl;
 
 	char charArray[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
-	std::cout << "Tableau de caractères: ";
+	std::cout << "Array of char: ";
 	iter(charArray, 5, printChar);
 	std::cout << std::endl;
 
@@ -43,17 +39,17 @@ int main()
 	strArray[0] = "C++";
 	strArray[1] = "is";
 	strArray[2] = "fun";
-	std::cout << "Tableau de strings: ";
+	std::cout << "Array of string ";
 	iter(strArray, 3, print<std::string>);
 	std::cout << std::endl;
 
-	std::cout << "Tableau d'entiers avant modification: ";
+	std::cout << "Int array before modification: ";
 	iter(intArray, 5, printInt);
 	std::cout << std::endl;
 	
 	iter(intArray, 5, incrementInt);
 	
-	std::cout << "Tableau d'entiers après modification: ";
+	std::cout << "Int array after modification: ";
 	iter(intArray, 5, printInt);
 	std::cout << std::endl;
 

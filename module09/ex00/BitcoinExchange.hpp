@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 09:13:10 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/25 22:24:08 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/05/26 09:57:35 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ class BitcoinExchange
 		BitcoinExchange& operator=(BitcoinExchange const & copied);
 		~BitcoinExchange();
 
-		void	parse_file(std::string file, std::map<std::string, float> map);
+		void	parse_input_file(void);
+		void	parse_database_file(void);
 		bool	check_date_format(std::string date);
 		bool	check_value_format(float value);
 		void	find_exchange_rate_by_date(std::map<std::string, float> database,  std::map<std::string, float> input_data);

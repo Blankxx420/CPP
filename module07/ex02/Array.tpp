@@ -6,7 +6,7 @@
 /*   By: brguicho <brguicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 09:53:34 by brguicho          #+#    #+#             */
-/*   Updated: 2025/05/13 13:24:15 by brguicho         ###   ########.fr       */
+/*   Updated: 2025/06/12 13:58:44 by brguicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Array<T>::Array(unsigned int n) : _size(n)
 	}
 }
 
-// Construction par copie
 template <typename T>
 Array<T>::Array(const Array<T>& other) : _size(other._size) 
 {
@@ -107,4 +106,5 @@ unsigned int Array<T>::size() const
 {
 	return _size;
 }
+
 #endif
